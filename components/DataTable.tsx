@@ -5,8 +5,7 @@ import Numpad from "./Numpad";
 
 const DataTable = () => {
 
-  const { listAttemps, randomAttemp } = useStateAttemps()
-  console.log(randomAttemp);
+  const { listAttemps } = useStateAttemps()
 
   return (
     <div className="relative overflow-x-auto shadow-md sm:rounded-md bg-white">

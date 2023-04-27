@@ -12,10 +12,10 @@ const Toast = () => {
     <div className="flex p-4 justify-between items-center">
       <div className="flex-shrink-0">
         {won && (
-          <RiCheckboxCircleFill className="text-green-500 text-xl"/>
+          <RiCheckboxCircleFill className="text-green-500 text-xl" size='30px'/>
         )}
         {gameOver && (
-          <RiCloseCircleFill className="text-red-500 text-xl"/>
+          <RiCloseCircleFill className="text-red-500 text-xl" size='30px'/>
         )}
       </div>
 
@@ -36,10 +36,11 @@ const Toast = () => {
       </div>
 
       <div className="mx-3">
-      <button type="button" className="inline-flex flex-shrink-0 justify-center items-center h-4 w-4 rounded-md text-gray-400 hover:text-gray-500 outline-none" 
-      onClick={dispatchResetGame}>
-        <RiRestartLine className="text-xl"/>
-      </button>
+      <RiRestartLine className="text-gray-400 hover:text-gray-500 cursor-pointer" 
+      size='25px'
+      onClick={dispatchResetGame}
+      />
+      
     </div>
     </div>
   </div>

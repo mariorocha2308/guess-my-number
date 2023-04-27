@@ -60,7 +60,7 @@ export const useStateAttemps = create<IAttemp>((set, get) => ({
     set({listAttemps: save, currentRow: target+1})
   },
   dispatchResetGame: () => {
-    set({ randomAttemp: shuffle(), won: false, gameOver: false,
+    set({ randomAttemp: shuffle(), won: false, gameOver: false, currentRow: 0,
       listAttemps: [
         { cell: 0, attemp: [], correctNumbers: 0, correctPositions: 0 },
         { cell: 1, attemp: [], correctNumbers: 0, correctPositions: 0 },

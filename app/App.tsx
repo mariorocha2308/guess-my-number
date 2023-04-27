@@ -11,7 +11,7 @@ const App = () => {
   return (  
     <>
       <DataTable/>
-      { won || gameOver && (
+      { [won, gameOver].includes(true) && (
         <Toast/>
       )}
     </>

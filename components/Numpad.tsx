@@ -1,6 +1,7 @@
 "use client";
 
 import { useStateAttemps } from '@/src/zustand/useStateAttemps';
+import { RiDeleteBack2Fill } from 'react-icons/ri'
 import { useState } from 'react';
 
 const Numpad = () => {
@@ -19,9 +20,18 @@ const Numpad = () => {
     }
   }
 
+  const onDelete = () => {
+    setAttemp(attemp.splice(0, attemp.length -1 ))
+  }
+
   return (
     <div className="flex flex-col items-center h-4/16 mb-4">
-      <input className="mb-4 font-bold text-gray-900 bg-gray-50 h-14 w-full text-center outline-none text-lg" type="text" value={attemp.join(' ')} readOnly />
+      <div className="flex relative w-full">
+        <input className="mb-4 font-bold text-gray-900 bg-gray-50 h-12 w-full text-center outline-none text-lg" type="text" 
+        value={attemp.join(' ')} readOnly />
+        <RiDeleteBack2Fill className="absolute right-8 top-4 text-red-500 text-xl cursor-pointer hover:text-red-400"
+        onClick={onDelete}/>
+      </div>
       <table>
         <tbody>
           <tr>
@@ -45,8 +55,9 @@ const Numpad = () => {
             onClick={() => onHandleClick(8)}>8</button></td>
             <td><button className="p-7 text-center cursor-pointer hover:bg-slate-50 w-full" 
             onClick={() => onHandleClick(9)}>9</button></td>
-            <td>
-              <button className="bg-transparent bg-blue-500 hover:bg-blue-400 text-white font-semibold py-2 px-4 hover:border-transparent w-full" onClick={submitAttemp}>Go</button>
+            <td className="flex">
+              <button className="bg-blue-500 hover:bg-blue-400 text-white font-semibold w-full h-[80px]" 
+              onClick={submitAttemp}>Go</button>
             </td>
           </tr>
         </tbody>
