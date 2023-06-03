@@ -1,5 +1,3 @@
-"use client";
-
 import { Attemps, useStateAttemps } from "@/src/zustand/useStateAttemps";
 import Numpad from "./Numpad";
 

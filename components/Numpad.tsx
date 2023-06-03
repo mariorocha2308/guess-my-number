@@ -1,5 +1,3 @@
-"use client";
-
 import { useStateAttemps } from '@/src/zustand/useStateAttemps';
 import { RiDeleteBack2Fill } from 'react-icons/ri'
 import { useState } from 'react';
@@ -28,7 +26,7 @@ const Numpad = () => {
     <div className="flex flex-col items-center h-4/16 mb-4">
       <div className="flex relative w-full">
         <input className="mb-4 font-bold text-gray-900 bg-gray-50 h-12 w-full text-center outline-none text-lg" type="text" 
-        value={attemp.join(' ')} readOnly />
+        value={attemp.join(' ')} readOnly aria-label='numbers'/>
         <RiDeleteBack2Fill className="absolute right-8 top-4 text-red-500 text-xl cursor-pointer hover:text-red-400"
         onClick={onDelete}/>
       </div>
@@ -56,7 +54,7 @@ const Numpad = () => {
             <td><button className="p-7 text-center cursor-pointer hover:bg-slate-50 w-full" 
             onClick={() => onHandleClick(9)}>9</button></td>
             <td className="flex">
-              <button className="bg-blue-500 hover:bg-blue-400 text-white font-semibold w-full h-[80px]" 
+              <button className="bg-blue-600 hover:bg-blue-400 text-white font-bold w-full h-[80px]" 
               onClick={submitAttemp}>Go</button>
             </td>
           </tr>
