@@ -6,7 +6,7 @@ const Toast = () => {
   const { randomAttemp, dispatchResetGame, gameOver, won } = useStateAttemps()
 
   return (  
-    <div className="max-w-xs bg-white border rounded-md shadow-lg absolute bottom-10 right-10 w-2/3" role="alert">
+    <div className="max-w-xs bg-white border rounded-md shadow-lg absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2" role="alert">
       <div className="flex p-4 justify-between items-center">
         <div className="flex-shrink-0">
           {won && (
